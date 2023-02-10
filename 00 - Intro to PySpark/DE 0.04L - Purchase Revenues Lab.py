@@ -39,7 +39,7 @@ display(events_df)
 # COMMAND ----------
 
 # TODO
-revenue_df = events_df.FILL_IN
+revenue_df = events_df.AddColumn
 display(revenue_df)
 
 # COMMAND ----------
