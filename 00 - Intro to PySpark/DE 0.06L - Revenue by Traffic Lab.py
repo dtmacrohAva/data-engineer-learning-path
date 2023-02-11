@@ -54,8 +54,11 @@ display(df)
 # COMMAND ----------
 
 # TODO
-
-traffic_df = (df.FILL_IN
+from pyspark.sql.functions import sum
+from pyspark.sql.functions import avg
+traffic_df = (df.groupBy("traffic_source")
+              .agg(sum("revenue").alias("total_rev"), avg("revenue").alias("avg_rev"))
+              
 )
 
 display(traffic_df)
